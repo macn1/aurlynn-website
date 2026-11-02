@@ -1,0 +1,21 @@
+:root {
+  --background: #f6f3ef;
+  --background-secondary: #efeae4;
+  --surface: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.55);
+
+  --foreground: #111111;
+  --secondary: #77736f;
+  --muted: #a09b95;
+
+  --accent: #b77a48;
+  --accent-light: #e7c6a4;
+
+  --border: #e7e0d8;
+  --dark: #111111;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-power3: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-inout: cubic-bezier(0.83, 0, 0.17, 1);
+
+}
