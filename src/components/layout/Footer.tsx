@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Logo } from "@/components/ui/Logo";
+import { Mail } from "lucide-react";
+import { site } from "@/lib/site";
 
 const COLUMNS = [
   { title: "Platform", links: [["Platform overview", "/platform"], ["How it works", "/how-it-works"], ["Integrations", "/integrations"]] },
@@ -15,11 +17,7 @@ const COLUMNS = [
 export function Footer() {
   return (
     <footer className="section-x border-t border-border bg-background pb-8 pt-[clamp(2.5rem,5vw,4.5rem)]">
-      <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(5,1fr)]">
-        <div>
-          <Logo />
-          <p className="body-sm mt-4 max-w-[26ch]">AI voice agents that turn conversations into completed actions.</p>
-        </div>
+      <div className="grid gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-[repeat(5,minmax(0,1fr))_minmax(0,1.7fr)]">
         {COLUMNS.map((col) => (
           <nav key={col.title} aria-label={col.title}>
             <h2 className="eyebrow-sm text-secondary">{col.title}</h2>
@@ -34,10 +32,29 @@ export function Footer() {
             </ul>
           </nav>
         ))}
+
+        {/* email support, on the right */}
+        <div className="sm:col-span-3 md:col-span-5 lg:col-span-1">
+          <h2 className="eyebrow-sm text-secondary">Email support</h2>
+          <p className="mt-4 max-w-[30ch] text-[0.8125rem] leading-relaxed text-[#4a4643]">Questions about Aurlynn or your account? Write to our team and we’ll get back to you.</p>
+          <a
+            href={`mailto:${site.supportEmail}`}
+            className="mt-4 inline-flex h-10 items-center gap-2 rounded-full bg-dark px-5 text-[0.8125rem] font-medium text-white transition-[background-color,box-shadow] duration-250 hover:bg-[#2a2420] hover:shadow-[0_10px_26px_-10px_rgba(183,122,72,0.6)]"
+          >
+            <Mail size={14} aria-hidden />
+            {site.supportEmail}
+          </a>
+        </div>
       </div>
-      <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-xs text-secondary sm:flex-row sm:justify-between">
+
+      {/* oversized wordmark */}
+      <div className="mt-[clamp(2.5rem,6vw,5rem)] pb-2">
+        <Image src="/brand/aurlynn-wordmark.png" alt="Aurlynn" width={1800} height={140} className="h-auto w-full select-none" priority={false} />
+      </div>
+
+      <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-secondary sm:flex-row sm:justify-between">
         <p>© 2026 Aurlynn. All rights reserved.</p>
-        <p>AI Voice Agents for Business</p>
+        <p>AI voice agents that turn conversations into completed actions.</p>
       </div>
     </footer>
   );

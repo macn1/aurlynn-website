@@ -14,8 +14,9 @@
   --color-border: var(--border);
   --color-dark: var(--dark);
 
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-  --font-display: var(--font-display-serif), "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -85,10 +86,38 @@ html.lenis body {
 
 .display-section {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(2.1rem, 3.4vw + 0.5rem, 3.75rem);
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+/* Hero typography: Sora / Inter / JetBrains Mono, ink palette. */
+.hero-title {
+  font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+  font-size: 42px;
+}
+@media (min-width: 640px) {
+  .hero-title { font-size: 60px; }
+}
+@media (min-width: 1024px) {
+  .hero-title { font-size: 76px; }
+}
+.ink-text {
+  background: linear-gradient(180deg, #0a0a0b 20%, #55555c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-eyebrow {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0a0a0b;
 }
 
 /*
@@ -178,19 +207,19 @@ html.lenis body {
   padding-inline: clamp(1.25rem, 5.8vw, 7.5rem);
 }
 .eyebrow-sm {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
   font-size: max(0.625rem, calc(var(--u) * 0.82));
-  letter-spacing: 0.3em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--foreground);
 }
 .display-section {
   font-family: var(--font-display);
-  font-weight: 430;
-  font-optical-sizing: auto;
+  font-weight: 500;
   font-size: max(1.9rem, calc(var(--u) * 3.4));
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 .body-sm {
   font-size: max(0.875rem, calc(var(--u) * 1.27));
@@ -371,4 +400,41 @@ html.lenis body {
 }
 .stage[data-state="active"] .stage-title {
   transform: translateX(4px);
+}
+
+@keyframes wf-pulse {
+  0%, 100% { transform: scaleY(0.55); }
+  50% { transform: scaleY(1.15); }
+}
+
+/* How-it-works stage */
+@keyframes hw-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hw-card-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes hw-tick {
+  from { transform: scale(0); }
+  60% { transform: scale(1.25); }
+  to { transform: scale(1); }
+}
+@keyframes hw-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes hw-ring {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.35); opacity: 0; }
+}
+.hw-in { opacity: 0; animation: hw-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.hw-card { animation: hw-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hw-tick { transform: scale(0); animation: hw-tick 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.hw-float { animation: hw-float 5.5s ease-in-out infinite; }
+.hw-ring { animation: hw-ring 1.8s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .hw-in, .hw-tick { opacity: 1; transform: none; animation: none; }
+  .hw-card, .hw-float, .hw-ring { animation: none; }
 }

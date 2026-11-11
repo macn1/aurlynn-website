@@ -1,0 +1,134 @@
+{
+ "ivr": {
+  "duration": 10.6,
+  "cues": [
+   {
+    "who": "c",
+    "text": "Hi, what's my checking account balance?",
+    "start": 0.0,
+    "end": 2.28
+   },
+   {
+    "who": "a",
+    "text": "Sure, Mr. Reyes. Your checking balance is two thousand, four hundred and eighty dollars.",
+    "start": 2.66,
+    "end": 8.23
+   },
+   {
+    "who": "a",
+    "text": "Is there anything else I can help with?",
+    "start": 8.45,
+    "end": 10.45
+   }
+  ]
+ },
+ "appointment": {
+  "duration": 13.62,
+  "cues": [
+   {
+    "who": "a",
+    "text": "Hi Sarah, this is a reminder of your appointment with Doctor Lee, tomorrow at nine thirty.",
+    "start": 0.0,
+    "end": 5.3
+   },
+   {
+    "who": "c",
+    "text": "Oh, could we move it to Thursday morning?",
+    "start": 5.68,
+    "end": 8.44
+   },
+   {
+    "who": "a",
+    "text": "Of course. You're now booked for Thursday at ten. I'll text you a confirmation.",
+    "start": 8.82,
+    "end": 13.47
+   }
+  ]
+ },
+ "afterhours": {
+  "duration": 10.95,
+  "cues": [
+   {
+    "who": "c",
+    "text": "Hello? The power's been out on Maple Street since the storm.",
+    "start": 0.0,
+    "end": 3.21
+   },
+   {
+    "who": "a",
+    "text": "I'm sorry about that. I've logged the outage, and a crew is already on the way. Power should be restored within two hours.",
+    "start": 3.59,
+    "end": 10.8
+   }
+  ]
+ },
+ "verification": {
+  "duration": 10.19,
+  "cues": [
+   {
+    "who": "a",
+    "text": "To verify your income, please confirm your date of birth.",
+    "start": 0.0,
+    "end": 3.2
+   },
+   {
+    "who": "c",
+    "text": "March twelfth, nineteen eighty-eight.",
+    "start": 3.58,
+    "end": 5.61
+   },
+   {
+    "who": "a",
+    "text": "Thank you, you're verified. I've emailed your form to complete the claim.",
+    "start": 5.99,
+    "end": 10.04
+   }
+  ]
+ },
+ "payments": {
+  "duration": 10.51,
+  "cues": [
+   {
+    "who": "a",
+    "text": "Your balance of one hundred and twenty dollars is past due. Would you like to pay now?",
+    "start": 0.0,
+    "end": 4.41
+   },
+   {
+    "who": "c",
+    "text": "Yes, please use my card on file.",
+    "start": 4.79,
+    "end": 7.4
+   },
+   {
+    "who": "a",
+    "text": "Payment received. Your receipt is on its way.",
+    "start": 7.78,
+    "end": 10.36
+   }
+  ]
+ },
+ "patientcare": {
+  "duration": 9.69,
+  "cues": [
+   {
+    "who": "a",
+    "text": "Hi Mr. Allen, how are you feeling after your surgery?",
+    "start": 0.0,
+    "end": 3.52
+   },
+   {
+    "who": "c",
+    "text": "A little sore, but doing okay.",
+    "start": 3.9,
+    "end": 5.77
+   },
+   {
+    "who": "a",
+    "text": "That's normal. I've booked your ride to Friday's follow-up visit.",
+    "start": 6.15,
+    "end": 9.54
+   }
+  ]
+ }
+}

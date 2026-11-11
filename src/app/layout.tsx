@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Newsreader } from "next/font/google";
+import { Geist, Inter, JetBrains_Mono, Newsreader, Sora } from "next/font/google";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -17,6 +17,10 @@ const display = Newsreader({
   style: ["normal", "italic"],
   axes: ["opsz"],
 });
+
+const sora = Sora({ variable: "--font-sora", subsets: ["latin"] });
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
+const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -38,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${display.variable}`}
+      className={`${geist.variable} ${display.variable} ${sora.variable} ${inter.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <head>

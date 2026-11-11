@@ -2,6 +2,8 @@ export const site = {
   name: "Aurlynn",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://aurlynn.com",
   // Sign-in lives in the existing product dashboard; set this once its URL is known.
+  // Placeholder: replace with the real support inbox.
+  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@aurlynn.com",
   signInUrl: process.env.NEXT_PUBLIC_SIGN_IN_URL ?? "/contact",
 };
 

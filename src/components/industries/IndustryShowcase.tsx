@@ -138,7 +138,7 @@ export function IndustryShowcase() {
         </div>
 
         {/* panel */}
-        <div id="industry-panel" role="tabpanel" aria-labelledby={`tab-${current.id}`} className="relative min-h-[calc(var(--u)*19)] max-md:min-h-[360px] md:pl-[calc(var(--u)*3.2)]">
+        <div id="industry-panel" role="tabpanel" aria-labelledby={`tab-${current.id}`} className="relative min-h-[calc(var(--u)*28)] max-md:min-h-[420px] md:pl-[calc(var(--u)*3.2)]">
           <div className="relative z-10 max-w-[calc(var(--u)*40)] md:pt-[calc(var(--u)*0.2)]">
             <p className="eyebrow-sm text-[max(0.58rem,calc(var(--u)*0.7))] text-secondary">{current.label}</p>
             <AnimatePresence mode="wait">
@@ -166,10 +166,10 @@ export function IndustryShowcase() {
           {/* scene: sits behind and beside the copy, fades into the page */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-y-[calc(var(--u)*-1.5)] right-[calc(var(--u)*-4)] left-[calc(var(--u)*17)] [mask-image:linear-gradient(to_right,transparent,black_28%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] [mask-composite:intersect] [-webkit-mask-composite:source-in] max-md:left-0 max-md:right-0 max-md:top-[150px] max-md:bottom-0"
+            className="pointer-events-none absolute inset-y-[calc(var(--u)*-1.5)] right-[calc(var(--u)*-4)] left-[calc(var(--u)*19)] [mask-image:linear-gradient(to_right,transparent,black_28%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] [mask-composite:intersect] [-webkit-mask-composite:source-in] max-md:left-0 max-md:right-0 max-md:top-[150px] max-md:bottom-0"
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_65%_60%,rgba(236,220,205,0.55),transparent_75%)]" />
-            <div className={`absolute inset-0 transition-opacity duration-500 ${fading ? "opacity-0" : "opacity-100"}`}>
+            <div className={`absolute inset-0 transition-[opacity,transform,filter] duration-500 ease-out ${fading ? "scale-[1.04] opacity-0 blur-[6px]" : "scale-100 opacity-100 blur-0"}`}>
               {near && webgl && tier !== "low" ? (
                 <IndustryScene industry={scene.id} lite={lite} animate={!reduced} active={visible && !fading} />
               ) : (

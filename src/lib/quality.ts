@@ -38,6 +38,11 @@ function get(): Tier {
   return current;
 }
 
+/** Current tier, readable outside React (client only). */
+export function getTier(): Tier {
+  return get();
+}
+
 export function setTier(next: Tier) {
   if (next === current) return;
   current = next;
