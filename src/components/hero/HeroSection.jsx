@@ -109,7 +109,7 @@ function HeroSection() {
           </div>
           <div data-hero="cta">
             <Button
-    href="/platform"
+    href="/capabilities"
     variant="outline"
   >
               Explore the Platform

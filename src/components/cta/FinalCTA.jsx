@@ -64,7 +64,7 @@ function FinalCTA() {
             See how Aurlynn can handle your business conversations and drive real outcomes.
           </p>
           <div className="mt-[calc(var(--u)*0.6)] flex flex-wrap gap-[calc(var(--u)*1.2)]">
-            <Button href="/#demo" arrow icon={<AudioLines aria-hidden size={14} />} className="!h-[max(38px,calc(var(--u)*3.1))] !px-[calc(var(--u)*1.9)]">
+            <Button href="/contact" arrow icon={<AudioLines aria-hidden size={14} />} className="!h-[max(38px,calc(var(--u)*3.1))] !px-[calc(var(--u)*1.9)]">
               See a Live Demo
             </Button>
             <Button href="/contact" variant="outline" icon={<CalendarDays aria-hidden size={14} />} className="!h-[max(38px,calc(var(--u)*3.1))] !px-[calc(var(--u)*1.7)]">

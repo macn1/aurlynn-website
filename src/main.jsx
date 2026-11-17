@@ -5,6 +5,7 @@ import "@fontsource-variable/sora";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "./styles/globals.css";
+import "./styles/pages.css";
 import { App } from "./routes/App";
 createRoot(document.getElementById("root")).render(
   <StrictMode>

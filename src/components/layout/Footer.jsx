@@ -1,19 +1,15 @@
 import { Link } from "@/components/ui/Link";
 import { Mail } from "lucide-react";
-import { site } from "@/lib/site";
-const COLUMNS = [
-  { title: "Platform", links: [["Platform overview", "/platform"], ["How it works", "/how-it-works"], ["Integrations", "/integrations"]] },
-  { title: "Solutions", links: [["B2B", "/solutions/b2b"], ["B2C", "/solutions/b2c"], ["Use cases", "/use-cases"]] },
-  {
-    title: "Industries",
-    links: [["Automotive", "/industries/automotive"], ["Real Estate", "/industries/real-estate"], ["Healthcare", "/industries/healthcare"], ["Education", "/industries/education"]]
-  },
-  { title: "Company", links: [["About", "/about"], ["Contact", "/contact"], ["Resources", "/resources"]] },
-  { title: "Legal", links: [["Privacy", "/privacy"], ["Terms", "/terms"], ["Cookies", "/cookies"]] }
-];
+import { navGroups, site } from "@/lib/site";
+const COLUMNS = navGroups
+  .filter((g) => g.label !== "Resources")
+  .map((g) => ({
+    title: g.label,
+    links: (g.label === "Company" ? [...g.items, ...navGroups.find((x) => x.label === "Resources").items] : g.items).map((i) => [i.label, i.href]),
+  }));
 function Footer() {
   return <footer className="section-x border-t border-border bg-background pb-8 pt-[clamp(2.5rem,5vw,4.5rem)]">
-      <div className="grid gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-[repeat(5,minmax(0,1fr))_minmax(0,1.7fr)]">
+      <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-[repeat(4,minmax(0,1fr))_minmax(0,1.7fr)]">
         {COLUMNS.map((col) => <nav key={col.title} aria-label={col.title}>
             <h2 className="eyebrow-sm text-secondary">{col.title}</h2>
             <ul className="mt-4 space-y-2.5">
@@ -28,7 +24,7 @@ function Footer() {
         {
     /* email support, on the right */
   }
-        <div className="sm:col-span-3 md:col-span-5 lg:col-span-1">
+        <div className="sm:col-span-2 md:col-span-4 lg:col-span-1">
           <h2 className="eyebrow-sm text-secondary">Email support</h2>
           <p className="mt-4 max-w-[30ch] text-[0.8125rem] leading-relaxed text-[#4a4643]">Questions about Aurlynn or your account? Write to our team and we’ll get back to you.</p>
           <a

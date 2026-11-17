@@ -127,12 +127,12 @@ function Navbar() {
               Sign in
             </Link>
             <Link
-    href="/#demo"
+    href="/contact"
     data-nav-cta
     data-nav-item
     className="group hidden h-[max(32px,calc(var(--u)*3))] items-center gap-1.5 rounded-full bg-dark px-[calc(var(--u)*1.25)] text-[max(12px,calc(var(--u)*1.12))] font-medium text-white transition-[background-color,box-shadow] duration-250 hover:bg-[#2a2420] hover:shadow-[0_10px_26px_-10px_rgba(183,122,72,0.6)] sm:inline-flex"
   >
-              See a live demo
+              See Aurlynn in Action
               <ArrowRight aria-hidden size={14} className="transition-transform duration-250 group-hover:translate-x-0.5" />
             </Link>
             <button
