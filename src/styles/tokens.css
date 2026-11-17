@@ -1,4 +1,7 @@
 :root {
+  --font-sora: "Sora Variable";
+  --font-inter: "Inter Variable";
+  --font-jetbrains: "JetBrains Mono Variable";
   --background: #f6f3ef;
   --background-secondary: #efeae4;
   --surface: #ffffff;
