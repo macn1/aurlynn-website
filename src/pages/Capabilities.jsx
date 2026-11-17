@@ -31,7 +31,7 @@ function Explorer() {
   };
   return (
     <div className="grid gap-6 lg:grid-cols-[0.8fr_1.4fr] lg:gap-12">
-      <div role="tablist" aria-label="Capabilities" aria-orientation="vertical" onKeyDown={onKey} className="flex gap-2 overflow-x-auto pb-2 lg:max-h-[34rem] lg:flex-col lg:gap-0 lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 [scrollbar-width:thin]">
+      <div role="tablist" aria-label="Capabilities" aria-orientation="vertical" onKeyDown={onKey} className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-0 lg:overflow-visible lg:pb-0 [scrollbar-width:none]">
         {capabilities.map((x, i) => (
           <button
             key={x.id}
