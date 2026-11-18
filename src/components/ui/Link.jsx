@@ -1,9 +1,10 @@
+"use client";
 import { forwardRef } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
+
 const Link = forwardRef(function Link2({ href, ...rest }, ref) {
   if (/^(https?:|mailto:|tel:|#)/.test(href)) return <a ref={ref} href={href} {...rest} />;
-  return <RouterLink ref={ref} to={href} {...rest} />;
+  return <NextLink ref={ref} href={href} {...rest} />;
 });
-export {
-  Link
-};
+
+export { Link };

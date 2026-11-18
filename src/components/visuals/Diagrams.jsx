@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { BarChart3 } from "lucide-react";
 

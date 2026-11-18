@@ -1,3 +1,4 @@
+"use client";
 import { Fragment, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { EMERALD, EMERALD_INK, INK, STEPS, mono } from "./shared";

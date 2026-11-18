@@ -1,3 +1,4 @@
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, LoaderCircle } from "lucide-react";
 import { EMERALD, EMERALD_INK, inter, mono, shellVariants, sora, useMilestones } from "./shared";

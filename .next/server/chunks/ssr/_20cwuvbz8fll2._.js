@@ -1,0 +1,3 @@
+module.exports=[33838,a=>{"use strict";var b=a.i(64831);let c={name:"rotate-ccw",size:24,node:[["path",{d:"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",key:"1357e3"}],["path",{d:"M3 3v5h5",key:"1xhq8a"}]]};c.node;let d=(0,b.f)(c);a.s(["f",0,d],33838)},56151,a=>{"use strict";var b=a.i(72131),c=a.i(39432),d=a.i(21216);a.s(["f",0,function(a,{interval:e=1600,start:f=0,loop:g=!0}={}){let h=(0,b.useRef)(null),i=(0,c.f)(h,{margin:"-15% 0px"}),j=(0,d.f)(),[k,l]=(0,b.useState)(f),[m,n]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{if(!i||m||j)return;let b=setInterval(()=>l(b=>b+1<a?b+1:g?0:b),e);return()=>clearInterval(b)},[i,m,j,a,e,g]),[h,k,a=>{n(!0),l(a)},()=>n(!0)]}])}];
+
+//# sourceMappingURL=_20cwuvbz8fll2._.js.map

@@ -1,3 +1,4 @@
+"use client";
 import { useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";

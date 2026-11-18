@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/components/ui/Link";
 import { Mail } from "lucide-react";
 import { navGroups, site } from "@/lib/site";

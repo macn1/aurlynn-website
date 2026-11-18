@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import { Check } from "lucide-react";

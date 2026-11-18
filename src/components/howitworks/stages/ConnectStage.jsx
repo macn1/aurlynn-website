@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { CalendarCheck, Database, Phone, Users } from "lucide-react";
 import { EMERALD, EMERALD_INK, mono } from "../shared";

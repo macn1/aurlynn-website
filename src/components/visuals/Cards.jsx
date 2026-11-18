@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { Check, Database, User, UserRound, Calendar, ArrowRight } from "lucide-react";
 

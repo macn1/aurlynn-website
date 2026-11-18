@@ -1,3 +1,4 @@
+"use client";
 /** Sound-wave bars. Animates transform only; `active` pauses it. Pure CSS, no JS per frame. */
 export function Waveform({ bars = 28, height = 36, color = "currentColor", active = true, className = "" }) {
   const w = bars * 6;

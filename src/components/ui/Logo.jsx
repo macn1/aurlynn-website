@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/components/ui/Link";
 function LogoMark({ size = 34 }) {
   return <img src="/brand/aurlynn-mark.png" alt="" aria-hidden width={size} height={Math.round(size * 0.868)} style={{ width: size, height: "auto" }} />;

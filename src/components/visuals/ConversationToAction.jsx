@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, AudioLines, BrainCircuit, Zap } from "lucide-react";
 import { Waveform } from "./Waveform";

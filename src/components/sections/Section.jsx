@@ -1,3 +1,4 @@
+"use client";
 import { Reveal, TextReveal } from "@/components/motion/Reveal";
 
 const tones = {

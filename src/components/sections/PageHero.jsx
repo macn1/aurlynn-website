@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/components/ui/Link";
 import { ChevronRight } from "lucide-react";

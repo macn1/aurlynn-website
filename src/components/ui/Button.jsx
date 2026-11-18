@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight } from "lucide-react";
 const base = "group relative inline-flex h-[max(36px,calc(var(--u)*3.46))] items-center justify-center gap-[calc(var(--u)*0.95)] rounded-full px-[calc(var(--u)*1.95)] text-[max(12.5px,calc(var(--u)*1.17))] font-medium tracking-[0.005em] transition-[background-color,color,border-color,transform,box-shadow] duration-250 ease-[var(--ease-out-power3)] active:scale-[0.98]";

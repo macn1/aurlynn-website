@@ -1,3 +1,4 @@
+"use client";
 import { Reveal, TextReveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Waveform } from "@/components/visuals/Waveform";

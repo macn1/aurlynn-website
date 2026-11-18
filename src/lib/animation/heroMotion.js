@@ -1,3 +1,4 @@
+"use client";
 const heroMotion = {
   // waveform + streak intro progress, 0 → 1
   wave: 0,

@@ -1,3 +1,4 @@
+"use client";
 import { ArrowLeft, ArrowRight, RotateCcw } from "lucide-react";
 import { STEPS, mono } from "./shared";
 

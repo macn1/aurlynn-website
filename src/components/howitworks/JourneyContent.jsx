@@ -1,3 +1,4 @@
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { EMERALD_INK, STEPS, mono, sora } from "./shared";
 

@@ -1,3 +1,4 @@
+"use client";
 function GlassDisc({ index, kind, icon, className = "", style }) {
   return <div
     data-disc={index}

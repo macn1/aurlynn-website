@@ -1,12 +1,9 @@
-import { lazy, Suspense } from "react";
+"use client";
+import dynamic from "next/dynamic";
+
+// Client-only heavy components (three.js scenes): never server-rendered.
 function lazyClient(load) {
-  const Inner = lazy(load);
-  return function LazyClient(props) {
-    return <Suspense fallback={null}>
-        <Inner {...props} />
-      </Suspense>;
-  };
+  return dynamic(load, { ssr: false, loading: () => null });
 }
-export {
-  lazyClient
-};
+
+export { lazyClient };

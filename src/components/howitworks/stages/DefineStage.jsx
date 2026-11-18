@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { Card, EMERALD, EMERALD_INK, Label, Tick, mono, sora, useAfter } from "../shared";
 

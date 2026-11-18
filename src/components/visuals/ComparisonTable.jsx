@@ -1,3 +1,4 @@
+"use client";
 import { Check, Minus } from "lucide-react";
 
 /** Two-column comparison. rows: [[left, right]]. Semantic table for accessibility and answer engines. */

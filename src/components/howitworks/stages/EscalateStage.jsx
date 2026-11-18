@@ -1,3 +1,4 @@
+"use client";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Check, FileText, Phone, UserRound } from "lucide-react";
 import { Card, EMERALD, EMERALD_INK, Label, mono, useMilestones } from "../shared";

@@ -1,3 +1,4 @@
+"use client";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { StageCalls } from "./StageCalls";

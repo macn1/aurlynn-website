@@ -1,3 +1,4 @@
+"use client";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/components/ui/Link";
 import { Section, SectionHead } from "./Section";

@@ -56,7 +56,7 @@ function HeroArt() {
   useEffect(() => {
     tierRef.current = tier;
   }, [tier]);
-  const want3d = import.meta.env.VITE_HERO_3D === "1";
+  const want3d = process.env.NEXT_PUBLIC_HERO_3D === "1";
   useEffect(() => {
     if (!want3d || tier === "low" || !hasWebGL()) return;
     const w = window;
