@@ -37,14 +37,7 @@ function Footer() {
         </div>
       </div>
 
-      {
-    /* oversized wordmark */
-  }
-      <div className="mt-[clamp(2.5rem,6vw,5rem)] pb-2">
-        <img src="/brand/aurlynn-wordmark.png" alt="Aurlynn" width={1800} height={140} loading="lazy" className="h-auto w-full select-none" />
-      </div>
-
-      <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-secondary sm:flex-row sm:justify-between">
+      <div className="mt-[clamp(2.5rem,6vw,5rem)] flex flex-col gap-2 border-t border-border pt-6 text-xs text-secondary sm:flex-row sm:justify-between">
         <p>© 2026 Aurlynn. All rights reserved.</p>
         <p>AI voice agents that turn conversations into completed actions.</p>
       </div>

@@ -1,5 +1,3 @@
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { Seo } from "@/components/seo/Seo";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section, SectionHead } from "@/components/sections/Section";
@@ -7,86 +5,12 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { RelatedLinks, Definition } from "@/components/sections/RelatedLinks";
 import { CTABand } from "@/components/sections/CTABand";
 import { Reveal } from "@/components/motion/Reveal";
-import { ConversationCard } from "@/components/visuals/ConversationCard";
-import { BookingCard, HandoffVisual, RecordCard } from "@/components/visuals/Cards";
-import { AnalyticsMock, ConnectVisual } from "@/components/visuals/Diagrams";
+import { HowItWorksDemo } from "@/components/howitworks/HowItWorksDemo";
 import { FlowDiagram } from "@/components/visuals/FlowDiagram";
-import { steps7, model } from "@/data/capabilities";
+import { model } from "@/data/capabilities";
 import { faqSets } from "@/data/faqs";
 
 const crumbs = [["Home", "/"], ["How It Works", "/how-it-works"]];
-
-function StepVisual({ i }) {
-  switch (i) {
-    case 0:
-      return <RecordCard title="Agent brief" subtitle="Defined first" fields={[["Outcome", "Qualify inbound leads"], ["Success", "Meeting booked"], ["Rules", "Business-defined criteria"], ["Escalate when", "Specialist requested"]]} />;
-    case 1:
-      return <ConnectVisual />;
-    case 2:
-      return <ConversationCard title="Live call" turns={[["agent", "Hello, thanks for calling. How can I help?"], ["caller", "I'd like to know about your premium plan."], ["agent", "Happy to help. Is it for a team?"]]} />;
-    case 3:
-      return <RecordCard title="Understood" subtitle="From the conversation" fields={[["Intent", "Pricing enquiry"], ["Context", "Team of 20"], ["Answers", "Timing: this quarter"], ["Next step", "Book a meeting"]]} />;
-    case 4:
-      return <BookingCard title="Meeting booked" when="Thursday, 11:00" who="Record updated" where="Confirmation sent" />;
-    case 5:
-      return <HandoffVisual reason="Caller needs a specialist" context={["Intent captured", "Answers recorded", "Summary attached"]} />;
-    default:
-      return <AnalyticsMock />;
-  }
-}
-
-function Step({ s, i, active, setActive }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { margin: "-42% 0px -42% 0px" });
-  useEffect(() => {
-    if (inView) setActive(i);
-  }, [inView, i, setActive]);
-  return (
-    <li ref={ref} className="relative lg:min-h-[72vh] lg:py-[14vh]">
-      <div className={`transition-opacity duration-500 ${active === i ? "opacity-100" : "lg:opacity-35"}`}>
-        <p className="mono text-[11px] uppercase tracking-[0.16em] text-accent">{s.n} — {s.name}</p>
-        <h3 className="mt-3 font-[family-name:var(--font-sora)] text-2xl font-medium leading-tight sm:text-[2rem]">{s.text}</h3>
-        <p className="lead mt-4 max-w-[48ch]">{s.detail}</p>
-      </div>
-      <div className="mt-8 lg:hidden">
-        <StepVisual i={i} />
-      </div>
-    </li>
-  );
-}
-
-function Sticky7() {
-  const [active, setActive] = useState(0);
-  const reduce = useReducedMotion();
-  return (
-    <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-20">
-      <ol className="relative">
-        {steps7.map((s, i) => (
-          <Step key={s.n} s={s} i={i} active={active} setActive={setActive} />
-        ))}
-      </ol>
-      <div className="relative hidden lg:block">
-        <div className="sticky top-[calc(var(--nav-h)+4vh)] flex h-[calc(100vh-var(--nav-h)-8vh)] flex-col justify-center">
-          <div className="mb-6 flex gap-1.5" aria-hidden>
-            {steps7.map((s, i) => (
-              <span key={s.n} className={`h-1 flex-1 rounded-full transition-colors duration-500 ${i <= active ? "bg-accent" : "bg-border"}`} />
-            ))}
-          </div>
-          <div aria-live="polite">
-            <AnimatePresence mode="wait">
-              <motion.div key={active} initial={reduce ? false : { opacity: 0, y: 18, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
-                <StepVisual i={active} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          <p className="mono mt-5 text-[10.5px] uppercase tracking-[0.14em] text-secondary">
-            Step {steps7[active].n} · {steps7[active].name} · Illustrative
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function HowItWorks() {
   return (
@@ -119,11 +43,11 @@ export default function HowItWorks() {
       </Section>
 
       <Section tone="light" className="!pt-[clamp(2rem,4vw,4rem)]">
-        <SectionHead eyebrow="Seven steps" title="Conversations become actions.">
-          Scroll through the process. Each step shows what happens and what the business sees.
+        <SectionHead eyebrow="Seven steps" title="One conversation. Seven intelligent steps.">
+          From the moment a customer calls to the moment their request is resolved, Aurlynn handles every stage intelligently.
         </SectionHead>
-        <div className="mt-8 lg:mt-4">
-          <Sticky7 />
+        <div className="mt-10">
+          <HowItWorksDemo />
         </div>
       </Section>
 
