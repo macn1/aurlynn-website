@@ -1,9 +1,11 @@
-<!-- BEGIN:nextjs-agent-rules -->
+## Stack
 
-## This is NOT the Next.js you know
+Vite 8 + React 19 (JSX, no TypeScript) + React Router 7 + Tailwind CSS v4 (`@tailwindcss/vite`).
+Motion: framer-motion, GSAP + ScrollTrigger, Lenis smooth scroll. 3D: three + react-three-fiber.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+- Dev: `npm run dev` · Build: `npm run build` · Lint: `npm run lint`
+- `@/` aliases `src/`. Routes live in `src/routes/App.jsx`.
+- Internal links use `@/components/ui/Link` (`href` prop, router-aware). Client-only heavy components use `lazyClient()` from `@/lib/lazy`.
+- Env vars are `VITE_*` (see `src/lib/site.js`); `VITE_HERO_3D=1` enables the live 3D hero.
+- Fonts come from `@fontsource-variable/*`; the CSS variables are defined in `src/styles/tokens.css`.
+- The design tokens in `src/styles/tokens.css` and `src/styles/globals.css` are the visual source of truth.
